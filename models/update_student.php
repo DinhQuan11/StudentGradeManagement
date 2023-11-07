@@ -16,7 +16,8 @@ if (
 
 require_once '../connection.php';
 
-$sql = "INSERT INTO `hocsinh` (`MaHS`, `TenHS`, `GioiTinh`, `NgaySinh`, `DanToc`, `TonGiao`, `DiaChi`, `MaLop`) VALUES
-('$stdId', '$stdName', '$stdGender', '$stdDOB', '$stdNation', '$stdReligion', '$stdAddress', '$stdClass');";
+$sql = "UPDATE `hocsinh` SET `TenHS` = '$stdName', `GioiTinh` = '$stdGender', `NgaySinh` = '$stdDOB', 
+`DanToc` = '$stdNation', `TonGiao` = '$stdAddress', `DiaChi` = '$stdAddress', `MaLop` = '$stdClass'
+WHERE `MaHS` = '$stdId';";
 
 $result = $conn->query($sql);

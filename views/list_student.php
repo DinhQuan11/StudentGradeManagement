@@ -28,7 +28,6 @@
                     <th scope="col">Tôn giáo</th>
                     <th scope="col">Địa chỉ</th>
                     <th scope="col">Lớp</th>
-                    <th scope="col">Hạnh kiểm</th>
                     <th scope="col"></th>
                 </tr>
             </thead>
@@ -54,7 +53,6 @@
                         <td><?php echo $row['TonGiao'] ?></td>
                         <td><?php echo $row['DiaChi'] ?></td>
                         <td><?php echo $row['MaLop'] ?></td>
-                        <td><?php echo $row['MaHK'] ?></td>
                         <td>
                             <a href="../models/edit.student.php?sid=<?php echo $row['MaHS'] ?>" class="btn btn-info">Sửa</a>
                             <a href="../models/delete_student.php?sid=<?php echo $row['MaHS'] ?> " class="btn btn-danger">Xóa</a>

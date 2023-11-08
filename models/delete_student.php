@@ -1,8 +1,8 @@
 <?php
-$idStd = $_GET['sid'];
+$stdId = $_GET['sid'];
 
 require_once '../connection.php';
 
-$sql = "DELETE FROM `hocsinh` WHERE `MaHS` = '$idStd'";
+$sql = "DELETE FROM `hocsinh` WHERE `MaHS` = '$stdId'";
 
 $result = $conn->query($sql);

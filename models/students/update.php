@@ -14,10 +14,17 @@ if (
     $stdClass = $_POST["studentClass"];
 }
 
-require_once '../connection.php';
+$dir = '/VSCode/Website/StudentGradeManagement';
+require_once $dir . '/connection.php';
 
 $sql = "UPDATE `hocsinh` SET `TenHS` = '$stdName', `GioiTinh` = '$stdGender', `NgaySinh` = '$stdDOB', 
 `DanToc` = '$stdNation', `TonGiao` = '$stdAddress', `DiaChi` = '$stdAddress', `MaLop` = '$stdClass'
 WHERE `MaHS` = '$stdId';";
 
-$result = $conn->query($sql);
+try {
+    $updateResult = $conn->query($sql);
+    return $updateResult;
+} catch (Exception $e) {
+    error_log("MySQL error: " . $e->getMessage());
+    return false;
+}

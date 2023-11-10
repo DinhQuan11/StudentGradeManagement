@@ -14,9 +14,16 @@ if (
     $stdClass = $_POST["studentClass"];
 }
 
-require_once '../connection.php';
+$dir = '/VSCode/Website/StudentGradeManagement';
+require_once $dir . '/connection.php';
 
 $sql = "INSERT INTO `hocsinh` (`MaHS`, `TenHS`, `GioiTinh`, `NgaySinh`, `DanToc`, `TonGiao`, `DiaChi`, `MaLop`) VALUES
 ('$stdId', '$stdName', '$stdGender', '$stdDOB', '$stdNation', '$stdReligion', '$stdAddress', '$stdClass');";
 
-$result = $conn->query($sql);
+try {
+    $result = $conn->query($sql);
+    return $result;
+} catch (Exception $e) {
+    error_log("MySQL error: " . $e->getMessage());
+    return false;
+}

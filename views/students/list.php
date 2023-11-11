@@ -26,7 +26,13 @@
                     </div>
                     <form action="./search.php" method="post">
                         <div class="input-group mb-3" style="width: 400px;">
-                            <input type="text" class="form-control" placeholder="Tìm kiếm theo lớp" name="searchInput">
+                            <select class="form-select" name="searchInput">
+                                <option selected>Chọn lớp</option>
+                                <?php
+                                $dir = '/VSCode/Website/StudentGradeManagement';
+                                require $dir . '/models/students/class_list.php';
+                                ?>
+                            </select>
                             <button class="btn btn-info" type="submit" id="button-addon2">Tìm kiếm</button>
                         </div>
                     </form>
@@ -62,7 +68,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <?php include './add.html' ?>
+                            <?php include './add.php' ?>
                         </div>
                     </div>
                 </div>

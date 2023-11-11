@@ -3,7 +3,7 @@ if (isset($_POST["searchInput"])) {
     $search = $_POST["searchInput"];
 }
 
-echo 'Lớp: ' . $search;
+echo '<span class="search-title">Lớp: ' . $search . '</span>';
 
 $dir = '/VSCode/Website/StudentGradeManagement';
 require_once $dir . '/connection.php';

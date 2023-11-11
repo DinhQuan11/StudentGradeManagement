@@ -18,7 +18,7 @@ $dir = '/VSCode/Website/StudentGradeManagement';
 require_once $dir . '/connection.php';
 
 $sql = "UPDATE `hocsinh` SET `TenHS` = '$stdName', `GioiTinh` = '$stdGender', `NgaySinh` = '$stdDOB', 
-`DanToc` = '$stdNation', `TonGiao` = '$stdAddress', `DiaChi` = '$stdAddress', `MaLop` = '$stdClass'
+`DanToc` = '$stdNation', `TonGiao` = '$stdReligion', `DiaChi` = '$stdAddress', `MaLop` = '$stdClass'
 WHERE `MaHS` = '$stdId';";
 
 try {

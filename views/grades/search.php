@@ -10,9 +10,9 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <?php include_once '../components/header.html' ?>
-    <div class="row">
+    <div class="row mt-68">
       <div class="col-2">
         <?php include_once '../components/navbar.html' ?>
       </div>
@@ -47,7 +47,6 @@
               <th scope="col">STT</th>
               <th scope="col">Mã học sinh</th>
               <th scope="col">Tên học sinh</th>
-              <th scope="col">Môn học</th>
               <th scope="col">Điểm 15 phút</th>
               <th scope="col">Điểm giữa kỳ</th>
               <th scope="col">Điểm cuối kỳ</th>

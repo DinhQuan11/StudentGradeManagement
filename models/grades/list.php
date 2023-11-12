@@ -6,6 +6,7 @@ $sql = "SELECT ROW_NUMBER() OVER (ORDER BY `hocsinh`.`MaHS` ASC) AS `STT`,
     `hocsinh`.`MaLop`, 
     `hocsinh`.`MaHS`, 
     `hocsinh`.`TenHS`, 
+    `monhoc`.`MaMH`, 
     `monhoc`.`TenMH`, 
     `diem`.`DiemHeSo1`, 
     `diem`.`DiemHeSo2`, 
@@ -31,7 +32,7 @@ while ($row = $result->fetch_assoc()) {
     <td><?php echo $row['DiemHeSo3'] ?></td>
     <td><?php echo $row['DiemTrungBinh'] ?></td>
     <td>
-        <a href="edit.php?sid=<?php echo $row['MaHS'] ?>&sjname=<?php echo $row['TenMH'] ?>" class="btn btn-success">
+        <a href="edit.php?sid=<?php echo $row['MaHS'] ?>&sjid=<?php echo $row['MaMH'] ?>" class="btn btn-success">
             Nhập điểm
         </a>
     </td>

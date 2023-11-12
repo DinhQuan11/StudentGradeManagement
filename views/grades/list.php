@@ -10,9 +10,9 @@
 </head>
 
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <?php include_once '../components/header.html' ?>
-    <div class="row">
+    <div class="row mt-68">
       <div class="col-2">
         <?php include_once '../components/navbar.html' ?>
       </div>

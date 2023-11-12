@@ -1,3 +1,11 @@
+:root {
+  --primary-color: #47acfa;
+}
+
+.mt-68 {
+  margin-top: 68px;
+}
+
 .tool-bar {
   display: flex;
   justify-content: space-between;

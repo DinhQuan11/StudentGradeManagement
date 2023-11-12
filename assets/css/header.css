@@ -21,6 +21,10 @@
   margin-left: 32px;
 }
 
+.header__logo path {
+  fill: var(--primary-color);
+}
+
 .logo__img {
   width: 40px;
   margin-right: 8px;
@@ -28,8 +32,8 @@
 
 .logo__name {
   font-size: 28px;
-  font-weight: 500;
-  color: #333;
+  font-weight: 700;
+  color: var(--primary-color);
 }
 
 .header__user {

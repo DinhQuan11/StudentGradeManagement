@@ -4,15 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/navbar.css" />
   </head>
 
   <body>
-    <nav>
-      <ul>
-        <li><a href="../students/list.php">Danh sách học sinh</a></li>
-        <li><a href="../classes/list.php">Danh sách lớp học</a></li>
-        <li><a href="../subjects/list.php">Danh sách môn học</a></li>
-        <li><a href="../grades/list.php">Quản lý điểm</a></li>
+    <nav class="navbar__container">
+      <ul class="navbar__list">
+        <li class="navbar__item navbar__item--active">
+          <a class="navbar__link" href="../students/list.php">
+            Danh sách học sinh
+          </a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="../classes/list.php">
+            Danh sách lớp học
+          </a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="../subjects/list.php">
+            Danh sách môn học
+          </a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="../teachers/list.php">
+            Danh sách giáo viên
+          </a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="../grades/list.php">Quản lý điểm </a>
+        </li>
+        <li class="navbar__item">
+          <a class="navbar__link" href="../statistic/list.php">Thống kê</a>
+        </li>
       </ul>
     </nav>
   </body>

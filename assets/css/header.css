@@ -1,0 +1,42 @@
+.header__container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 56px;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  background-color: #fff;
+}
+
+.header__logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  margin-left: 32px;
+}
+
+.logo__img {
+  width: 40px;
+  margin-right: 8px;
+}
+
+.logo__name {
+  font-size: 28px;
+  font-weight: 500;
+  color: #333;
+}
+
+.header__user {
+  margin-right: 16px;
+  cursor: pointer;
+}
+
+.user__img {
+  width: 32px;
+}

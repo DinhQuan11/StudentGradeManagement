@@ -8,8 +8,7 @@ echo '<span class="search-title">Lớp: ' . $searchClass . '</span><br/>';
 echo '<span class="search-title">Môn học: ' . $searchSubject . '</span>';
 
 
-$dir = '/VSCode/Website/StudentGradeManagement';
-require_once $dir . '/connection.php';
+require_once _DIR_ROOT . '/connection.php';
 
 $sql = "SELECT ROW_NUMBER() OVER (ORDER BY `hocsinh`.`MaHS` ASC) AS `STT`,
     `hocsinh`.`MaHS`, 
@@ -30,20 +29,20 @@ $result = $conn->query($sql);
 
 while ($row = $result->fetch_assoc()) {
 ?>
-<tr>
-    <td><?php echo $row['STT'] ?></td>
-    <td><?php echo $row['MaHS'] ?></td>
-    <td><?php echo $row['TenHS'] ?></td>
-    <td><?php echo $row['DiemHeSo1'] ?></td>
-    <td><?php echo $row['DiemHeSo2'] ?></td>
-    <td><?php echo $row['DiemHeSo3'] ?></td>
-    <td><?php echo $row['DiemTrungBinh'] ?></td>
-    <td>
-        <a href="edit.php?sid=<?php echo $row['MaHS'] ?>&sjid=<?php echo $row['MaMH'] ?>" class="btn btn-success">
-            Nhập điểm
-        </a>
-    </td>
-</tr>
+    <tr>
+        <td><?php echo $row['STT'] ?></td>
+        <td><?php echo $row['MaHS'] ?></td>
+        <td><?php echo $row['TenHS'] ?></td>
+        <td><?php echo $row['DiemHeSo1'] ?></td>
+        <td><?php echo $row['DiemHeSo2'] ?></td>
+        <td><?php echo $row['DiemHeSo3'] ?></td>
+        <td><?php echo $row['DiemTrungBinh'] ?></td>
+        <td>
+            <a href="edit.php?sid=<?php echo $row['MaHS'] ?>&sjid=<?php echo $row['MaMH'] ?>" class="btn btn-success">
+                Nhập điểm
+            </a>
+        </td>
+    </tr>
 <?php
 }
 ?>

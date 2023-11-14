@@ -1,6 +1,5 @@
 <?php
-$dir = '/VSCode/Website/StudentGradeManagement';
-require_once $dir . '/models/grades/edit.php'
+require_once _DIR_ROOT . '/models/grades/edit.php'
 ?>
 
 <!DOCTYPE html>

@@ -1,6 +1,5 @@
 <?php
-$dir = '/VSCode/Website/StudentGradeManagement';
-require_once $dir . '/connection.php';
+require_once _DIR_ROOT . '/connection.php';
 
 $sql = "SELECT `TenMH` FROM `monhoc` ORDER BY `TenMH` ASC";
 

@@ -51,8 +51,7 @@
         <select class="form-select" name="studentClass">
           <option selected>Chọn lớp</option>
           <?php
-          $dir = '/VSCode/Website/StudentGradeManagement';
-          require $dir . '/models/common/class_list.php';
+          require _DIR_ROOT . '/models/common/class_list.php';
           ?>
         </select>
       </div>

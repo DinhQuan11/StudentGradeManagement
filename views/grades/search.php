@@ -24,15 +24,13 @@
               <select class="form-select" name="searchClass">
                 <option selected>Chọn lớp</option>
                 <?php
-                $dir = '/VSCode/Website/StudentGradeManagement';
-                require $dir . '/models/common/class_list.php';
+                require _DIR_ROOT . '/models/common/class_list.php';
                 ?>
               </select>
               <select class="form-select" name="searchSubject">
                 <option selected>Chọn môn học</option>
                 <?php
-                $dir = '/VSCode/Website/StudentGradeManagement';
-                require $dir . '/models/common/subject_list.php';
+                require _DIR_ROOT . '/models/common/subject_list.php';
                 ?>
               </select>
               <button class="btn btn-info" type="submit" id="button-addon2">
@@ -56,8 +54,7 @@
           </thead>
           <tbody>
             <?php
-            $dir = '/VSCode/Website/StudentGradeManagement';
-            require_once $dir . '/models/grades/search.php';
+            require_once _DIR_ROOT . '/models/grades/search.php';
             ?>
           </tbody>
         </table>

@@ -61,8 +61,7 @@ require_once $dir . '/models/students/edit.php'
             <select class="form-select" name="studentClass">
               <option selected><?php echo $row['MaLop'] ?></option>
               <?php
-              $dir = '/VSCode/Website/StudentGradeManagement';
-              require_once $dir . '/models/common/class_list.php';
+              require_once _DIR_ROOT . '/models/common/class_list.php';
               ?>
             </select>
           </div>

@@ -14,8 +14,7 @@ if (
     $stdClass = $_POST["studentClass"];
 }
 
-$dir = '/VSCode/Website/StudentGradeManagement';
-require_once $dir . '/connection.php';
+require_once _DIR_ROOT . '/connection.php';
 
 $sql = "INSERT INTO `hocsinh` (`MaHS`, `TenHS`, `GioiTinh`, `NgaySinh`, `DanToc`, `TonGiao`, `DiaChi`, `MaLop`) VALUES
 ('$stdId', '$stdName', '$stdGender', '$stdDOB', '$stdNation', '$stdReligion', '$stdAddress', '$stdClass');";

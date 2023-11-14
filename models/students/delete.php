@@ -1,8 +1,7 @@
 <?php
 $stdId = $_GET['sid'];
 
-$dir = '/VSCode/Website/StudentGradeManagement';
-require_once $dir . '/connection.php';
+require_once _DIR_ROOT . '/connection.php';
 
 $sql = "DELETE FROM `hocsinh` WHERE `MaHS` = '$stdId'";
 

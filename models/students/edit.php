@@ -1,8 +1,7 @@
 <?php
 $idStd = $_GET["sid"];
 
-$dir = '/VSCode/Website/StudentGradeManagement';
-require_once $dir . '/connection.php';
+require_once _DIR_ROOT . '/connection.php';
 
 $sql = "SELECT * FROM `hocsinh` WHERE `MaHS` = '$idStd'";
 

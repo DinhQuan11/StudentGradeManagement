@@ -10,10 +10,7 @@ if (
     $grade3 = $_POST["grade3"];
 }
 
-echo $subjectId;
-
-$dir = '/VSCode/Website/StudentGradeManagement';
-require_once $dir . '/connection.php';
+require_once _DIR_ROOT . '/connection.php';
 
 $sql = "UPDATE `diem` SET `DiemHeSo1` = '$grade1', `DiemHeSo2` = '$grade2', `DiemHeSo3` = '$grade3'
 WHERE `MaHS` = '$stdId' AND `MaMH` = '$subjectId'";

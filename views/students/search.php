@@ -29,8 +29,7 @@
               <select class="form-select" name="searchInput">
                 <option selected>Chọn lớp</option>
                 <?php
-                $dir = '/VSCode/Website/StudentGradeManagement';
-                require_once $dir . '/models/common/class_list.php';
+                require_once _DIR_ROOT . '/models/common/class_list.php';
                 ?>
               </select>
               <button class="btn btn-info" type="submit" id="button-addon2">
@@ -55,8 +54,7 @@
           </thead>
           <tbody>
             <?php
-            $dir = '/VSCode/Website/StudentGradeManagement';
-            require_once $dir . '/models/students/search.php';
+            require_once _DIR_ROOT . '/models/students/search.php';
             ?>
           </tbody>
         </table>

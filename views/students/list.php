@@ -1,3 +1,5 @@
+<?php $dirRoot = strstr(__DIR__, '\views', true) ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,7 +31,7 @@
               <select class="form-select" name="searchInput">
                 <option selected>Chọn lớp</option>
                 <?php
-                require _DIR_ROOT . '/models/common/class_list.php';
+                require $dirRoot . '/models/common/class_list.php';
                 ?>
               </select>
               <button class="btn btn-info" type="submit" id="button-addon2">
@@ -54,7 +56,7 @@
           </thead>
           <tbody>
             <?php
-            require_once _DIR_ROOT . '/models/students/list.php';
+            require_once $dirRoot . '/models/students/list.php';
             ?>
           </tbody>
         </table>

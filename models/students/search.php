@@ -5,7 +5,8 @@ if (isset($_POST["searchInput"])) {
 
 echo '<span class="search-title">Lớp: ' . $search . '</span>';
 
-require_once _DIR_ROOT . '/connection.php';
+$dirRoot = strstr(__DIR__, '\models', true);
+require_once $dirRoot . '/connection.php';
 
 $sql = "SELECT * FROM `hocsinh` WHERE `MaLop` = '$search' ORDER BY `MaHS` ASC";
 

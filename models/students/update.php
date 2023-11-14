@@ -14,7 +14,8 @@ if (
     $stdClass = $_POST["studentClass"];
 }
 
-require_once _DIR_ROOT . '/connection.php';
+$dirRoot = strstr(__DIR__, '\models', true);
+require_once $dirRoot . '/connection.php';
 
 $sql = "UPDATE `hocsinh` SET `TenHS` = '$stdName', `GioiTinh` = '$stdGender', `NgaySinh` = '$stdDOB', 
 `DanToc` = '$stdNation', `TonGiao` = '$stdReligion', `DiaChi` = '$stdAddress', `MaLop` = '$stdClass'

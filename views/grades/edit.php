@@ -1,5 +1,6 @@
 <?php
-require_once _DIR_ROOT . '/models/grades/edit.php'
+$dirRoot = strstr(__DIR__, '\views', true);
+require_once $dirRoot . '/models/grades/edit.php'
 ?>
 
 <!DOCTYPE html>

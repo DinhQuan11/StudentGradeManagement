@@ -8,7 +8,8 @@ echo '<span class="search-title">Lớp: ' . $searchClass . '</span><br/>';
 echo '<span class="search-title">Môn học: ' . $searchSubject . '</span>';
 
 
-require_once _DIR_ROOT . '/connection.php';
+$dirRoot = strstr(__DIR__, '\models', true);
+require_once $dirRoot . '/connection.php';
 
 $sql = "SELECT ROW_NUMBER() OVER (ORDER BY `hocsinh`.`MaHS` ASC) AS `STT`,
     `hocsinh`.`MaHS`, 

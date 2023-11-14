@@ -1,7 +1,8 @@
 <?php
 $stdId = $_GET['sid'];
 
-require_once _DIR_ROOT . '/connection.php';
+$dirRoot = strstr(__DIR__, '\models', true);
+require_once $dirRoot . '/connection.php';
 
 $sql = "DELETE FROM `hocsinh` WHERE `MaHS` = '$stdId'";
 

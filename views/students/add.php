@@ -51,7 +51,8 @@
         <select class="form-select" name="studentClass">
           <option selected>Chọn lớp</option>
           <?php
-          require _DIR_ROOT . '/models/common/class_list.php';
+          $dirRoot = strstr(__DIR__, '\views', true);
+          require $dirRoot . '/models/common/class_list.php';
           ?>
         </select>
       </div>

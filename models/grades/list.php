@@ -1,5 +1,6 @@
 <?php
-require_once _DIR_ROOT . '/connection.php';
+$dirRoot = strstr(__DIR__, '\models', true);
+require_once $dirRoot . '/connection.php';
 
 $sql = "SELECT ROW_NUMBER() OVER (ORDER BY `hocsinh`.`MaHS` ASC) AS `STT`, 
     `hocsinh`.`MaLop`, 

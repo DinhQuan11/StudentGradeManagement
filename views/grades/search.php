@@ -1,3 +1,5 @@
+<?php $dirRoot = strstr(__DIR__, '\views', true) ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,13 +26,13 @@
               <select class="form-select" name="searchClass">
                 <option selected>Chọn lớp</option>
                 <?php
-                require _DIR_ROOT . '/models/common/class_list.php';
+                require $dirRoot . '/models/common/class_list.php';
                 ?>
               </select>
               <select class="form-select" name="searchSubject">
                 <option selected>Chọn môn học</option>
                 <?php
-                require _DIR_ROOT . '/models/common/subject_list.php';
+                require $dirRoot . '/models/common/subject_list.php';
                 ?>
               </select>
               <button class="btn btn-info" type="submit" id="button-addon2">
@@ -54,7 +56,7 @@
           </thead>
           <tbody>
             <?php
-            require_once _DIR_ROOT . '/models/grades/search.php';
+            require_once $dirRoot . '/models/grades/search.php';
             ?>
           </tbody>
         </table>

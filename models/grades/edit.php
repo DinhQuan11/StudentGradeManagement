@@ -2,7 +2,8 @@
 $stdId = $_GET["sid"];
 $subjectId = $_GET["sjid"];
 
-require_once _DIR_ROOT . '/connection.php';
+$dirRoot = strstr(__DIR__, '\models', true);
+require_once $dirRoot . '/connection.php';
 
 $sql = "SELECT `hocsinh`.`MaLop`, `hocsinh`.`MaHS`, `hocsinh`.`TenHS`, `monhoc`.`MaMH`, `monhoc`.`TenMH`, `diem`.`DiemHeSo1`, `diem`.`DiemHeSo2`, `diem`.`DiemHeSo3` 
 FROM `diem`

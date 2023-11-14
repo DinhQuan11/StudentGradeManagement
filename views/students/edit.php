@@ -1,6 +1,6 @@
 <?php
-$dir = '/VSCode/Website/StudentGradeManagement';
-require_once $dir . '/models/students/edit.php'
+$dirRoot = strstr(__DIR__, '\views', true);
+require_once $dirRoot . '/models/students/edit.php'
 ?>
 
 <!DOCTYPE html>
@@ -61,7 +61,8 @@ require_once $dir . '/models/students/edit.php'
             <select class="form-select" name="studentClass">
               <option selected><?php echo $row['MaLop'] ?></option>
               <?php
-              require_once _DIR_ROOT . '/models/common/class_list.php';
+              $dirRoot = strstr(__DIR__, '\views', true);
+              require_once $dirRoot . '/models/common/class_list.php';
               ?>
             </select>
           </div>

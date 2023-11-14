@@ -14,7 +14,8 @@ if (
     $stdClass = $_POST["studentClass"];
 }
 
-require_once _DIR_ROOT . '/connection.php';
+$dirRoot = strstr(__DIR__, '\models', true);
+require_once $dirRoot . '/connection.php';
 
 $sql = "INSERT INTO `hocsinh` (`MaHS`, `TenHS`, `GioiTinh`, `NgaySinh`, `DanToc`, `TonGiao`, `DiaChi`, `MaLop`) VALUES
 ('$stdId', '$stdName', '$stdGender', '$stdDOB', '$stdNation', '$stdReligion', '$stdAddress', '$stdClass');";

@@ -6,6 +6,70 @@
   margin-top: 68px;
 }
 
+.mt-40 {
+  margin-top: 40px;
+}
+
+.btn-back {
+  display: flex;
+  justify-content: end;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+}
+
+.btn-back:hover {
+  color: var(--primary-color);
+}
+
+/* Login page */
+.app-container {
+  display: flex;
+  background-color: #daeefe;
+  height: 100vh;
+}
+
+.background-home {
+  margin: auto;
+  margin-top: 40px;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.login__title {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.login__option {
+  margin-top: 16px;
+}
+
+.login__link {
+  margin: 0 8px;
+}
+
+/* Login admin page */
+.admin-container {
+  width: 480px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.admin-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
 .tool-bar {
   display: flex;
   justify-content: space-between;

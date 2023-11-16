@@ -25,22 +25,26 @@
   fill: var(--primary-color);
 }
 
-.logo__img {
+.header__logo-img {
   width: 40px;
   margin-right: 8px;
 }
 
-.logo__name {
+.header__logo-name {
   font-size: 28px;
   font-weight: 700;
   color: var(--primary-color);
 }
 
-.header__user {
+.header__logout {
   margin-right: 16px;
   cursor: pointer;
 }
 
-.user__img {
-  width: 32px;
+.header__logout-img {
+  width: 24px;
+}
+
+.header__logout-img:hover {
+  opacity: 0.8;
 }

@@ -3,19 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
     <link rel="stylesheet" href="/assets/css/header.css" />
   </head>
 
   <body>
     <header class="header__container">
-      <a href="/views/home.php" class="header__logo">
-        <img src="/assets/imgs/logo.svg" alt="Logo" class="logo__img" />
-        <span class="logo__name">SGM</span>
+      <a href="/views/logins/home.php" class="header__logo">
+        <img src="/assets/imgs/logo.svg" alt="Logo" class="header__logo-img" />
+        <span class="header__logo-name">SGM</span>
       </a>
-      <div class="header__user">
-        <img src="/assets/imgs/user.svg" alt="User" class="user__img" />
-      </div>
+      <a href="../../controllers/Logout.php" class="header__logout">
+        <img
+          src="/assets/imgs/logout.svg"
+          alt="User"
+          class="header__logout-img"
+        />
+      </a>
     </header>
   </body>
 </html>

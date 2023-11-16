@@ -1,0 +1,31 @@
+.background__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  user-select: none;
+}
+
+.background__logo {
+  display: flex;
+  align-items: center;
+}
+
+.background__logo-img {
+  width: 120px;
+  margin-right: 16px;
+}
+.background__logo-name {
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.background__description {
+  font-size: 24px;
+  color: var(--primary-color);
+}
+
+.background__img {
+  width: 100%;
+}

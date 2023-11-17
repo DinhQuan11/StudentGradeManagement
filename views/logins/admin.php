@@ -13,8 +13,8 @@
 <body>
   <div class="app-container">
     <?php include_once '../components/background.html' ?>
-    <div class="admin-container">
-      <h1 class="admin-title">Đăng nhập</h1>
+    <div class="login-container">
+      <h1 class="login-title">Đăng nhập</h1>
       <form action="/controllers/Home.php" method="post">
         <div class="mb-4">
           <label for="username" class="form-label">Tài khoản</label>

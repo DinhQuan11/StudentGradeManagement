@@ -1,8 +1,5 @@
 <?php
-if (
-    isset($_POST["studentId"]) && $_POST["grade1"] && $_POST["subjectId"]
-    && $_POST["grade2"] && $_POST["grade3"]
-) {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stdId = $_POST["studentId"];
     $subjectId = $_POST["subjectId"];
     $grade1 = $_POST["grade1"];

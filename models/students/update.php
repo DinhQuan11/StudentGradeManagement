@@ -1,9 +1,5 @@
 <?php
-if (
-    isset($_POST["studentId"]) && $_POST["studentName"] && $_POST["studentGender"]
-    && $_POST["studentDOB"] && $_POST["studentNation"] && $_POST["studentReligion"]
-    && $_POST["studentAddress"] && $_POST["studentClass"]
-) {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stdId = $_POST["studentId"];
     $stdName = $_POST["studentName"];
     $stdGender = $_POST["studentGender"];

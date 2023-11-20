@@ -15,7 +15,7 @@
         <?php include_once '../components/background.html' ?>
         <div class="login-container">
             <h1 class="login-title">Tra cứu</h1>
-            <form action="transcript.php" method="post">
+            <form action="./transcript.php" method="post">
                 <div class="mb-4">
                     <label for="studentId" class="form-label">Mã số học sinh</label>
                     <input required type="text" class="form-control" name="studentId" id="studentId" />

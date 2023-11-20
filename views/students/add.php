@@ -16,11 +16,11 @@
     <form action="/controllers/Student.php" method="post">
       <div class="mb-3">
         <label class="form-label" for="studentId">Mã học sinh</label>
-        <input type="text" class="form-control" name="studentId" placeholder="Nhập mã học sinh (HS000)" />
+        <input required type="text" class="form-control" name="studentId" placeholder="Nhập mã học sinh (HS000)" />
       </div>
       <div class="mb-3">
         <label class="form-label" for="studentName">Tên học sinh</label>
-        <input type="text" class="form-control" name="studentName" placeholder="Nhập tên học sinh" />
+        <input required type="text" class="form-control" name="studentName" placeholder="Nhập tên học sinh" />
       </div>
       <div class="mb-3">
         <label class="form-label" for="studentGender">Giới tính</label>
@@ -32,19 +32,19 @@
       </div>
       <div class="mb-3">
         <label class="form-label" for="studentDOB">Ngày sinh</label>
-        <input type="text" class="form-control" name="studentDOB" placeholder="yyyy-mm-dd" />
+        <input required type="text" class="form-control" name="studentDOB" placeholder="yyyy-mm-dd" />
       </div>
       <div class="mb-3">
         <label class="form-label" for="studentNation">Dân tộc</label>
-        <input type="text" class="form-control" name="studentNation" placeholder="Nhập dân tộc" />
+        <input required type="text" class="form-control" name="studentNation" placeholder="Nhập dân tộc" />
       </div>
       <div class="mb-3">
         <label class="form-label" for="studentReligion">Tôn giáo</label>
-        <input type="text" class="form-control" name="studentReligion" placeholder="Nhập tôn giáo" />
+        <input required type="text" class="form-control" name="studentReligion" placeholder="Nhập tôn giáo" />
       </div>
       <div class="mb-3">
         <label class="form-label" for="studentAddress">Địa chỉ</label>
-        <input type="text" class="form-control" name="studentAddress" placeholder="Nhập địa chỉ" />
+        <input required type="text" class="form-control" name="studentAddress" placeholder="Nhập địa chỉ" />
       </div>
       <div class="mb-3">
         <label class="form-label" for="studentClass">Lớp</label>

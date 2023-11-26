@@ -24,7 +24,10 @@ require_once $dirRoot . '/controllers/Login.php'
         <?php include_once '../components/navbar.html' ?>
       </div>
       <div class="col-10">
-        <h2>Cập nhật thông tin học sinh</h2>
+        <h2 class="text-center">Cập nhật thông tin học sinh</h2>
+        <a href="/views/students/list.php" class="btn btn-outline-light" type="" id="button-addon2">
+          <img class="btn-hover w-20" src="/assets/imgs/back.svg" alt="Quay lại" />
+        </a>
         <form action="/controllers/Student.php" method="post">
           <div class="mb-3">
             <label class="form-label" for="studentId">Mã học sinh</label>
@@ -32,11 +35,11 @@ require_once $dirRoot . '/controllers/Login.php'
           </div>
           <div class="mb-3">
             <label class="form-label" for="studentName">Tên học sinh</label>
-            <input type="text" class="form-control" name="studentName" value="<?php echo $row['TenHS'] ?>" />
+            <input required type="text" class="form-control" name="studentName" value="<?php echo $row['TenHS'] ?>" />
           </div>
           <div class="mb-3">
             <label class="form-label" for="studentGender">Giới tính</label>
-            <select class="form-select" id="inputGroupSelect01" name="studentGender">
+            <select required class="form-select" id="inputGroupSelect01" name="studentGender">
               <option selected><?php echo $row['GioiTinh'] ?></option>
               <option value="Nam">Nam</option>
               <option value="Nữ">Nữ</option>
@@ -44,32 +47,33 @@ require_once $dirRoot . '/controllers/Login.php'
           </div>
           <div class="mb-3">
             <label class="form-label" for="studentDOB">Ngày sinh</label>
-            <input type="text" class="form-control" name="studentDOB" value="<?php echo $row['NgaySinh'] ?>" />
+            <input required type="date" class="form-control" name="studentDOB" value="<?php echo $row['NgaySinh'] ?>" />
           </div>
           <div class="mb-3">
             <label class="form-label" for="studentNation">Dân tộc</label>
-            <input type="text" class="form-control" name="studentNation" value="<?php echo $row['DanToc'] ?>" />
+            <input required type="text" class="form-control" name="studentNation" value="<?php echo $row['DanToc'] ?>" />
           </div>
           <div class="mb-3">
             <label class="form-label" for="studentReligion">Tôn giáo</label>
-            <input type="text" class="form-control" name="studentReligion" value="<?php echo $row['TonGiao'] ?>" />
+            <input required type="text" class="form-control" name="studentReligion" value="<?php echo $row['TonGiao'] ?>" />
           </div>
           <div class="mb-3">
             <label class="form-label" for="studentAddress">Địa chỉ</label>
-            <input type="text" class="form-control" name="studentAddress" value="<?php echo $row['DiaChi'] ?>" />
+            <input required type="text" class="form-control" name="studentAddress" value="<?php echo $row['DiaChi'] ?>" />
           </div>
           <div class="mb-3">
             <label class="form-label" for="studentClass">Lớp</label>
-            <select class="form-select" name="studentClass">
+            <select required class="form-select" name="studentClass">
               <option selected><?php echo $row['MaLop'] ?></option>
               <?php
-              $dirRoot = strstr(__DIR__, '\views', true);
               require_once $dirRoot . '/models/common/class_list.php';
               ?>
             </select>
           </div>
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button type="submit" class="btn btn-primary ">Lưu thông tin</button>
+            <button type="submit" class="btn btn-primary mb-3">
+              Lưu thông tin
+            </button>
           </div>
         </form>
       </div>

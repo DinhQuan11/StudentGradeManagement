@@ -1,3 +1,8 @@
+<?php
+$dirRoot = strstr(__DIR__, '\views', true);
+require_once $dirRoot . '/controllers/Login.php'
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,6 +14,7 @@
   <link rel="stylesheet" href="/assets/css/style.css" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
   </script>
+  <script src="/assets/js/main.js"></script>
 </head>
 
 <body>
@@ -24,15 +30,15 @@
       </div>
       <div class="mb-3">
         <label class="form-label" for="studentGender">Giới tính</label>
-        <select class="form-select" name="studentGender">
-          <option selected>Chọn giới tính</option>
+        <select required class="form-select" name="studentGender">
+          <option selected disabled value="">Chọn giới tính</option>
           <option value="Nam">Nam</option>
           <option value="Nữ">Nữ</option>
         </select>
       </div>
       <div class="mb-3">
         <label class="form-label" for="studentDOB">Ngày sinh</label>
-        <input required type="text" class="form-control" name="studentDOB" placeholder="yyyy-mm-dd" />
+        <input required type="date" class="form-control" name="studentDOB" placeholder="yyyy-mm-dd" min="1960-01-01" max="2022-12-31" />
       </div>
       <div class="mb-3">
         <label class="form-label" for="studentNation">Dân tộc</label>
@@ -48,10 +54,9 @@
       </div>
       <div class="mb-3">
         <label class="form-label" for="studentClass">Lớp</label>
-        <select class="form-select" name="studentClass">
-          <option selected>Chọn lớp</option>
+        <select required class="form-select" name="studentClass">
+          <option selected disabled value="">Chọn lớp</option>
           <?php
-          $dirRoot = strstr(__DIR__, '\views', true);
           require $dirRoot . '/models/common/class_list.php';
           ?>
         </select>

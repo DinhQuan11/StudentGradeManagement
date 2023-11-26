@@ -26,21 +26,16 @@ require_once $dirRoot . '/controllers/Login.php'
       <div class="col-10">
         <h1 class="text-center">Danh sách học sinh</h1>
         <div class="tool-bar">
-          <div class="d-grid gap-2 d-md-flex justify-content-md">
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addModal">
-              Thêm học sinh
-            </button>
-          </div>
           <form action="./search.php" method="post">
             <div class="input-group mb-3 search-bar">
-              <select class="form-select" name="searchInput">
-                <option selected>Chọn lớp</option>
+              <select required class="form-select" name="searchInput">
+                <option selected disabled value="">Chọn lớp</option>
                 <?php
                 require_once $dirRoot . '/models/common/class_list.php';
                 ?>
               </select>
-              <button class="btn btn-info" type="submit" id="button-addon2">
-                Tìm kiếm
+              <button class="btn btn-light" type="submit" id="button-addon2">
+                <img class="btn-hover w-20" src="/assets/imgs/glass.svg" alt="Tìm kiếm">
               </button>
             </div>
           </form>
@@ -48,6 +43,7 @@ require_once $dirRoot . '/controllers/Login.php'
         <table class="table">
           <thead>
             <tr>
+              <th scope="col">STT</th>
               <th scope="col">Mã học sinh</th>
               <th scope="col">Tên học sinh</th>
               <th scope="col">Giới tính</th>
@@ -56,7 +52,11 @@ require_once $dirRoot . '/controllers/Login.php'
               <th scope="col">Tôn giáo</th>
               <th scope="col">Địa chỉ</th>
               <th scope="col">Lớp</th>
-              <th scope="col"></th>
+              <th scope="col">
+                <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#addModal">
+                  <img class="btn-hover w-28" src="/assets/imgs/plus.svg" alt="Thêm">
+                </button>
+              </th>
             </tr>
           </thead>
           <tbody>

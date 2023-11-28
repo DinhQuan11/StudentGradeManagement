@@ -39,8 +39,8 @@ require_once $dirRoot . '/controllers/Login.php'
                 require $dirRoot . '/models/common/subject_list.php';
                 ?>
               </select>
-              <button class="btn btn-info" type="submit" id="button-addon2">
-                Tìm kiếm
+              <button class="btn btn-light" type="submit" id="button-addon2">
+                <img class="btn-hover w-20" src="/assets/imgs/glass.svg" alt="Tìm kiếm">
               </button>
             </div>
           </form>

@@ -46,7 +46,7 @@ require_once $dirRoot . '/controllers/Login.php'
           <thead>
             <tr>
               <th scope="col">STT</th>
-              <th scope="col">Mã học sinh</th>
+              <th scope="col">MSHS</th>
               <th scope="col">Tên học sinh</th>
               <th scope="col">Giới tính</th>
               <th scope="col">Ngày sinh</th>

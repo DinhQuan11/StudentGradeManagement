@@ -17,8 +17,12 @@ while ($row = $result->fetch_assoc()) {
     <td><?php echo $row['TenLop'] ?></td>
     <td><?php echo $row['SiSoLop'] ?></td>
     <td>
-        <a href="edit.php?sid=<?php echo $row['MaLop'] ?>" class="btn btn-warning">Sửa</a>
-        <a href="/controllers/Classes.php?sid=<?php echo $row['MaLop'] ?> " class="btn btn-danger">Xóa</a>
+        <a href="edit.php?sid=<?php echo $row['MaLop'] ?>" class="mr-8 text-decoration-none">
+            <img class="btn-hover w-20" src="/assets/imgs/pen.svg" alt="Sửa">
+        </a>
+        <a href="/controllers/Classes.php?sid=<?php echo $row['MaLop'] ?> " class="text-decoration-none">
+            <img class="btn-hover w-20" src="/assets/imgs/trash.svg" alt="Xóa">
+        </a>
     </td>
 </tr>
 <?php

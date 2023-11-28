@@ -4,14 +4,14 @@ $stdId = $_GET['sid'];
 $dirRoot = strstr(__DIR__, '\models', true);
 require_once $dirRoot . '/connection.php';
 
-$sql = "DELETE FROM `hocsinh` WHERE `MaHS` = '$stdId'";
+$sqlGrade = "DELETE FROM `diem` WHERE `MaHS` = '$stdId'";
 
-$deleteResult = $conn->query($sql);
+$resultGrade = $conn->query($sqlGrade);
 
-try {
-    $deleteResult = $conn->query($sql);
-    return $deleteResult;
-} catch (Exception $e) {
-    error_log("MySQL error: " . $e->getMessage());
-    return false;
-}
+$sqlConduct = "DELETE FROM `hocsinhhanhkiem` WHERE `MaHS` = '$stdId'";
+
+$resultConduct = $conn->query($sqlConduct);
+
+$sqlStudent = "DELETE FROM `hocsinh` WHERE `MaHS` = '$stdId'";
+
+$resultStudent = $conn->query($sqlStudent);

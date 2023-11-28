@@ -11,7 +11,7 @@ $sql = "SELECT ROW_NUMBER() OVER (ORDER BY `hocsinh`.`MaHS` ASC) AS `STT`,
     `diem`.`DiemHeSo1`, 
     `diem`.`DiemHeSo2`, 
     `diem`.`DiemHeSo3`,
-    ROUND((`diem`.`DiemHeSo1` + ((`diem`.`DiemHeSo2`)*2) + ((`diem`.`DiemHeSo3`)*3)) / 6, 2) AS `DiemTrungBinh` 
+    ROUND((`diem`.`DiemHeSo1` + ((`diem`.`DiemHeSo2`)*2) + ((`diem`.`DiemHeSo3`)*3)) / 6, 1) AS `DiemTrungBinh` 
 FROM `diem`
 INNER JOIN `hocsinh` ON `diem`.`MaHS` = `hocsinh`.`MaHS`
 INNER JOIN `monhoc` ON `diem`.`MaMH` = `monhoc`.`MaMH`

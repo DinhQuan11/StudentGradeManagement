@@ -6,6 +6,16 @@ if (isset($_POST['studentId'])) {
 $dirRoot = strstr(__DIR__, '\models', true);
 require_once $dirRoot . '/connection.php';
 
+$checkExistQuery = "SELECT * FROM `hocsinh` WHERE `MaHS` = '$stdId'";
+$existResult = $conn->query($checkExistQuery);
+$studentExists = mysqli_num_rows($existResult) > 0;
+
+if (!$studentExists) {
+    $loginError = urlencode("Mã số học sinh không tồn tại!");
+    header("Location: ../../views/logins/student.php?error=$loginError");
+    exit;
+};
+
 $sql = "SELECT `hocsinh`.`MaHS`, 
     `hocsinh`.`TenHS`, 
     `hocsinh`.`GioiTinh`,

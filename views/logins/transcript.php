@@ -19,8 +19,8 @@
         <img class="student-logout-btn" src="/assets/imgs/logout.svg" alt="Logout">
       </a>
     </div>
-    <h2 class="text-center mb-2">Kết quả học tập</h2>
-    <div class="d-flex justify-content-between mb-2">
+    <h2 class="text-center mb-4">Kết quả học tập</h2>
+    <div class="d-flex justify-content-between mb-4">
       <?php require_once $dirRoot . '/models/logins/info.php' ?>
       <span>Họ và tên: <?php echo $row['TenHS'] ?></span>
       <span>Mã số học sinh: <?php echo $row['MaHS'] ?></span>
@@ -31,17 +31,23 @@
     <table class="table table-bordered">
       <thead>
         <tr>
-          <th scope="col">Môn học</th>
-          <th scope="col">Điểm 15 phút</th>
-          <th scope="col">Điểm giữa kỳ</th>
-          <th scope="col">Điểm cuổi kỳ</th>
-          <th scope="col">Điểm trung bình</th>
+          <th scope="col" class="text-center">Môn học</th>
+          <th scope="col" class="text-center">Điểm 15 phút</th>
+          <th scope="col" class="text-center">Điểm giữa kỳ</th>
+          <th scope="col" class="text-center">Điểm cuổi kỳ</th>
+          <th scope="col" class="text-center">Điểm trung bình</th>
         </tr>
       </thead>
       <tbody>
         <?php require_once $dirRoot . '/models/logins/student.php' ?>
       </tbody>
     </table>
+    <div class="d-flex justify-content-between mb-4">
+      <span>Điểm trung bình tất cả các môn học: <?php echo $averageGrade ?></span>
+      <span>Xếp loại học lực: <?php echo $rankedGrade ?></span>
+      <span>Xếp loại hạnh kiểm: <?php echo $conduct ?></span>
+      <span>Xếp loại: <?php echo $ranked ?></span>
+    </div>
   </div>
 </body>
 

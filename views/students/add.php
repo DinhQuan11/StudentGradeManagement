@@ -10,16 +10,12 @@ require_once $dirRoot . '/controllers/Login.php'
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thêm học sinh</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-  <link rel="stylesheet" href="/assets/css/style.css" />
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-  </script>
-  <script src="/assets/js/main.js"></script>
+  <?php require_once '../components/link.html' ?>
 </head>
 
 <body>
   <div class="container">
-    <form action="/controllers/Student.php" method="post">
+    <form action="/models/students/add.php" method="post">
       <div class="mb-3">
         <label class="form-label" for="studentId">Mã học sinh</label>
         <input required type="text" class="form-control" name="studentId" placeholder="Nhập mã học sinh (HS000)" />
@@ -28,25 +24,23 @@ require_once $dirRoot . '/controllers/Login.php'
         <label class="form-label" for="studentName">Tên học sinh</label>
         <input required type="text" class="form-control" name="studentName" placeholder="Nhập tên học sinh" />
       </div>
-      <div class="mb-3">
-        <label class="form-label" for="studentGender">Giới tính</label>
-        <select required class="form-select" name="studentGender">
-          <option selected disabled value="">Chọn giới tính</option>
-          <option value="Nam">Nam</option>
-          <option value="Nữ">Nữ</option>
-        </select>
+      <div class="row">
+        <div class="col mb-3">
+          <label class="form-label" for="studentGender">Giới tính</label>
+          <select required class="form-select" name="studentGender">
+            <option selected disabled value="">Chọn giới tính</option>
+            <option value="Nam">Nam</option>
+            <option value="Nữ">Nữ</option>
+          </select>
+        </div>
+        <div class="col mb-3">
+          <label class="form-label" for="studentDOB">Ngày sinh</label>
+          <input required type="date" class="form-control" name="studentDOB" placeholder="yyyy-mm-dd" min="1960-01-01" max="2022-12-31" />
+        </div>
       </div>
       <div class="mb-3">
-        <label class="form-label" for="studentDOB">Ngày sinh</label>
-        <input required type="date" class="form-control" name="studentDOB" placeholder="yyyy-mm-dd" min="1960-01-01" max="2022-12-31" />
-      </div>
-      <div class="mb-3">
-        <label class="form-label" for="studentNation">Dân tộc</label>
-        <input required type="text" class="form-control" name="studentNation" placeholder="Nhập dân tộc" />
-      </div>
-      <div class="mb-3">
-        <label class="form-label" for="studentReligion">Tôn giáo</label>
-        <input required type="text" class="form-control" name="studentReligion" placeholder="Nhập tôn giáo" />
+        <label class="form-label" for="studentReligion">Số điện thoại</label>
+        <input required type="text" class="form-control" name="studentPhone" placeholder="Nhập số điện thoại" />
       </div>
       <div class="mb-3">
         <label class="form-label" for="studentAddress">Địa chỉ</label>

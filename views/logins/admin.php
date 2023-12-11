@@ -24,11 +24,11 @@
           <label for="password" class="form-label">Mật khẩu</label>
           <input required type="password" class="form-control" name="password" id="password" />
         </div>
-        <?php if (isset($_GET['error'])) { ?>
-          <div class="alert alert-danger mb-4" role="alert">
-            <?= $_GET['error'] ?>
-          </div>
-        <?php } ?>
+        <p class="text-danger">
+          <?php if (isset($_GET['error'])) {
+            echo $_GET['error'];
+          } ?>
+        </p>
         <div class="d-grid gap-2">
           <button type="submit" class="btn btn-primary mb-4">Đăng nhập</button>
         </div>

@@ -43,6 +43,10 @@
   text-decoration: none;
 }
 
+.border-btn {
+  border: 1px solid #dee2e6;
+}
+
 /* Student page */
 .student-logout-btn {
   width: 24px;

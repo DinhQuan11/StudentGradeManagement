@@ -1,5 +1,5 @@
 <?php
-$idStd = $_GET["sid"];
+$idStd = $_GET["id"];
 
 $dirRoot = strstr(__DIR__, '\models', true);
 require_once $dirRoot . '/connection.php';

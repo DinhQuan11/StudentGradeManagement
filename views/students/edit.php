@@ -10,10 +10,8 @@ require_once $dirRoot . '/controllers/Login.php'
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/x-icon" href="/assets/imgs/logo.svg" />
   <title>Cập nhật thông tin học sinh</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <?php require_once '../components/link.html' ?>
 </head>
 
 <body>
@@ -25,7 +23,7 @@ require_once $dirRoot . '/controllers/Login.php'
       </div>
       <div class="col-10">
         <h2 class="text-center">Cập nhật thông tin học sinh</h2>
-        <a href="/views/students/list.php" class="btn btn-outline-light" type="" id="button-addon2">
+        <a href="/views/students/list.php" class="btn btn-outline-light border-btn mb-3" type="" id="button-addon2">
           <img class="btn-hover w-20" src="/assets/imgs/back.svg" alt="Quay lại" />
         </a>
         <form action="/controllers/Student.php" method="post">
@@ -37,25 +35,23 @@ require_once $dirRoot . '/controllers/Login.php'
             <label class="form-label" for="studentName">Tên học sinh</label>
             <input required type="text" class="form-control" name="studentName" value="<?php echo $row['TenHS'] ?>" />
           </div>
-          <div class="mb-3">
-            <label class="form-label" for="studentGender">Giới tính</label>
-            <select required class="form-select" id="inputGroupSelect01" name="studentGender">
-              <option selected><?php echo $row['GioiTinh'] ?></option>
-              <option value="Nam">Nam</option>
-              <option value="Nữ">Nữ</option>
-            </select>
+          <div class="row">
+            <div class="col mb-3">
+              <label class="form-label" for="studentGender">Giới tính</label>
+              <select required class="form-select" id="inputGroupSelect01" name="studentGender">
+                <option selected><?php echo $row['GioiTinh'] ?></option>
+                <option value="Nam">Nam</option>
+                <option value="Nữ">Nữ</option>
+              </select>
+            </div>
+            <div class="col mb-3">
+              <label class="form-label" for="studentDOB">Ngày sinh</label>
+              <input required type="date" class="form-control" name="studentDOB" value="<?php echo $row['NgaySinh'] ?>" />
+            </div>
           </div>
           <div class="mb-3">
-            <label class="form-label" for="studentDOB">Ngày sinh</label>
-            <input required type="date" class="form-control" name="studentDOB" value="<?php echo $row['NgaySinh'] ?>" />
-          </div>
-          <div class="mb-3">
-            <label class="form-label" for="studentNation">Dân tộc</label>
-            <input required type="text" class="form-control" name="studentNation" value="<?php echo $row['DanToc'] ?>" />
-          </div>
-          <div class="mb-3">
-            <label class="form-label" for="studentReligion">Tôn giáo</label>
-            <input required type="text" class="form-control" name="studentReligion" value="<?php echo $row['TonGiao'] ?>" />
+            <label class="form-label" for="studentPhone">Số điện thoại</label>
+            <input required type="text" class="form-control" name="studentPhone" value="<?php echo $row['SDTHS'] ?>" />
           </div>
           <div class="mb-3">
             <label class="form-label" for="studentAddress">Địa chỉ</label>
